@@ -1,0 +1,63 @@
+Bypass|Omitir efecto|Bypass|Contourner|Bypass
+Choose VST3 effect...|Elegir efecto VST3...|Scegli effetto VST3...|Choisir un effet VST3...|VST3-Effekt auswählen...
+Choose VST3 effect|Elegir efecto VST3|Scegli effetto VST3|Choisir un effet VST3|VST3-Effekt auswählen
+Open plugin interface|Abrir interfaz del plugin|Apri interfaccia del plugin|Ouvrir l’interface du plugin|Plugin-Oberfläche öffnen
+Remove effect|Quitar efecto|Rimuovi effetto|Retirer l’effet|Effekt entfernen
+No effect selected. Audio passes through.|Ningún efecto seleccionado. El audio pasa sin procesar.|Nessun effetto selezionato. L’audio passa senza elaborazione.|Aucun effet sélectionné. L’audio passe sans traitement.|Kein Effekt ausgewählt. Das Audio wird unverändert durchgeleitet.
+One effect per filter. Add another OBS filter for another effect.|Un efecto por filtro. Añade otro filtro de OBS para otro efecto.|Un effetto per filtro. Aggiungi un altro filtro OBS per un altro effetto.|Un effet par filtre. Ajoutez un autre filtre OBS pour un autre effet.|Ein Effekt pro Filter. Füge für einen weiteren Effekt einen weiteren OBS-Filter hinzu.
+Effect unavailable|Efecto no disponible|Effetto non disponibile|Effet indisponible|Effekt nicht verfügbar
+Loading effect...|Cargando efecto...|Caricamento effetto...|Chargement de l’effet...|Effekt wird geladen...
+Wait for the current plugin operation to finish.|Espera a que termine la operación actual del plugin.|Attendi il completamento dell’operazione del plugin.|Attendez la fin de l’opération du plugin.|Warte, bis der aktuelle Plugin-Vorgang abgeschlossen ist.
+Source is no longer available.|La fuente ya no está disponible.|La sorgente non è più disponibile.|La source n’est plus disponible.|Die Quelle ist nicht mehr verfügbar.
+Plugin interface is unavailable.|La interfaz del plugin no está disponible.|L’interfaccia del plugin non è disponibile.|L’interface du plugin est indisponible.|Die Plugin-Oberfläche ist nicht verfügbar.
+Plugin error. Technical details:|Error del plugin. Detalles técnicos:|Errore del plugin. Dettagli tecnici:|Erreur du plugin. Détails techniques :|Plugin-Fehler. Technische Details:
+Add VST3 Effect|Añadir efecto VST3|Aggiungi effetto VST3|Ajouter un effet VST3|VST3-Effekt hinzufügen
+Select a 64-bit VST3 audio effect. Instruments are not supported.|Selecciona un efecto de audio VST3 de 64 bits. No se admiten instrumentos.|Seleziona un effetto audio VST3 a 64 bit. Gli strumenti non sono supportati.|Sélectionnez un effet audio VST3 64 bits. Les instruments ne sont pas pris en charge.|Wähle einen 64-Bit-VST3-Audioeffekt. Instrumente werden nicht unterstützt.
+Search effects|Buscar efectos|Cerca effetti|Rechercher des effets|Effekte suchen
+Optional VST3 folder|Carpeta VST3 opcional|Cartella VST3 facoltativa|Dossier VST3 facultatif|Optionaler VST3-Ordner
+Browse...|Examinar...|Sfoglia...|Parcourir...|Durchsuchen...
+VST3 effects folder|Carpeta de efectos VST3|Cartella degli effetti VST3|Dossier des effets VST3|Ordner für VST3-Effekte
+Choose a scan location.|Elige una ubicación para explorar.|Scegli una posizione da analizzare.|Choisissez un emplacement à analyser.|Wähle einen Speicherort zum Durchsuchen.
+Scan installed|Explorar instalados|Analizza installati|Analyser les effets installés|Installierte durchsuchen
+Scan folder|Explorar carpeta|Analizza cartella|Analyser le dossier|Ordner durchsuchen
+Retry scan|Reintentar exploración|Riprova analisi|Relancer l’analyse|Erneut durchsuchen
+Add|Añadir|Aggiungi|Ajouter|Hinzufügen
+Cancel|Cancelar|Annulla|Annuler|Abbrechen
+Choose a folder or use Scan installed.|Elige una carpeta o pulsa Explorar instalados.|Scegli una cartella o usa Analizza installati.|Choisissez un dossier ou utilisez Analyser les effets installés.|Wähle einen Ordner oder nutze Installierte durchsuchen.
+Stopping scan. Retry when it finishes.|Deteniendo la exploración. Reintenta cuando termine.|Arresto dell’analisi. Riprova al termine.|Arrêt de l’analyse. Réessayez une fois terminée.|Suche wird angehalten. Versuche es danach erneut.
+Other scans are finishing. Please retry.|Otras exploraciones están terminando. Vuelve a intentarlo.|Altre analisi stanno terminando. Riprova.|D’autres analyses se terminent. Réessayez.|Andere Suchvorgänge werden beendet. Versuche es erneut.
+VST3 scan helper is missing.|Falta el explorador auxiliar de VST3.|Manca il programma di analisi VST3.|Le programme d’analyse VST3 est introuvable.|Das VST3-Suchprogramm fehlt.
+Finding VST3 effects...|Buscando efectos VST3...|Ricerca effetti VST3...|Recherche des effets VST3...|VST3-Effekte werden gesucht...
+Folder discovery limit reached.|Se alcanzó el límite de carpetas.|Raggiunto il limite delle cartelle.|Limite de recherche des dossiers atteinte.|Maximale Anzahl von Ordnern erreicht.
+Effect list limit reached.|Se alcanzó el límite de efectos.|Raggiunto il limite degli effetti.|Limite de la liste d’effets atteinte.|Maximale Anzahl von Effekten erreicht.
+Scanning %1 / %2...|Explorando %1 / %2...|Analisi %1 / %2...|Analyse %1 / %2...|Suche %1 / %2...
+Found %1 effect candidates. Compatibility is checked when adding.|Se encontraron %1 efectos candidatos. La compatibilidad se comprueba al añadirlos.|Trovati %1 effetti candidati. La compatibilità viene verificata all’aggiunta.|%1 effets candidats trouvés. La compatibilité est vérifiée lors de l’ajout.|%1 mögliche Effekte gefunden. Die Kompatibilität wird beim Hinzufügen geprüft.
+Scan cancelled. |Exploración cancelada. |Analisi annullata. |Analyse annulée. |Suche abgebrochen. 
+%1 scan issue(s).|%1 incidencias de exploración.|%1 problemi di analisi.|%1 problème(s) d’analyse.|%1 Suchproblem(e).
+Invalid path in package.|Ruta no válida en el paquete.|Percorso non valido nel pacchetto.|Chemin invalide dans le paquet.|Ungültiger Pfad im Paket.
+Incomplete package.|Paquete incompleto.|Pacchetto incompleto.|Paquet incomplet.|Unvollständiges Paket.
+Close OBS before continuing.|Cierra OBS antes de continuar.|Chiudi OBS prima di continuare.|Fermez OBS avant de continuer.|Schließe OBS, bevor du fortfährst.
+Invalid installation record.|Registro de instalación no válido.|Registro di installazione non valido.|Registre d’installation invalide.|Ungültige Installationsaufzeichnung.
+Record contains unknown files.|Registro con archivos desconocidos.|Il registro contiene file sconosciuti.|Le registre contient des fichiers inconnus.|Die Aufzeichnung enthält unbekannte Dateien.
+The destination folder must be named obs-vst3-nexus.|La carpeta de destino debe llamarse obs-vst3-nexus.|La cartella di destinazione deve chiamarsi obs-vst3-nexus.|Le dossier de destination doit s’appeler obs-vst3-nexus.|Der Zielordner muss obs-vst3-nexus heißen.
+An unowned or modified file was preserved: |Se conserva un archivo ajeno o modificado: |File estraneo o modificato conservato: |Un fichier tiers ou modifié a été conservé : |Eine fremde oder geänderte Datei wurde beibehalten: 
+The operation did not complete. Check the administrator window.|No se completó la operación. Revisa el mensaje de la ventana de administrador.|Operazione non completata. Controlla la finestra amministratore.|L’opération n’a pas abouti. Consultez la fenêtre administrateur.|Der Vorgang wurde nicht abgeschlossen. Prüfe das Administratorfenster.
+Test installer 0.1.0 · revision 10|Instalador de prueba 0.1.0 · revisión 10|Installer di prova 0.1.0 · revisione 10|Installateur de test 0.1.0 · révision 10|Testinstallation 0.1.0 · Revision 10
+One VST3 effect per filter · Windows x64 · OBS 31 / 32 / 33|Un efecto VST3 por filtro · Windows x64 · OBS 31 / 32 / 33|Un effetto VST3 per filtro · Windows x64 · OBS 31 / 32 / 33|Un effet VST3 par filtre · Windows x64 · OBS 31 / 32 / 33|Ein VST3-Effekt pro Filter · Windows x64 · OBS 31 / 32 / 33
+Test version. Close OBS before installing or uninstalling.|Versión de prueba. Cierra OBS antes de instalar o desinstalar.|Versione di prova. Chiudi OBS prima di installare o disinstallare.|Version de test. Fermez OBS avant d’installer ou de désinstaller.|Testversion. Schließe OBS vor der Installation oder Deinstallation.
+Folder…|Carpeta…|Cartella…|Dossier…|Ordner…
+Select the parent folder for obs-vst3-nexus|Selecciona la carpeta padre para instalar obs-vst3-nexus|Seleziona la cartella principale per obs-vst3-nexus|Sélectionnez le dossier parent pour obs-vst3-nexus|Wähle den übergeordneten Ordner für obs-vst3-nexus
+Scenes and profiles are preserved. Keep this installer to uninstall.|No modifica escenas ni perfiles. Conserva el instalador para desinstalar.|Scene e profili vengono conservati. Tieni l’installer per disinstallare.|Scènes et profils conservés. Gardez cet installateur pour désinstaller.|Szenen und Profile bleiben erhalten. Bewahre das Installationsprogramm auf.
+Commercial effects are not included. Extended OBS testing remains pending.|No incluye efectos comerciales. Quedan pendientes pruebas ampliadas en OBS.|Effetti commerciali non inclusi. Restano da svolgere test estesi in OBS.|Effets commerciaux non inclus. Des tests OBS approfondis restent nécessaires.|Kommerzielle Effekte sind nicht enthalten. Erweiterte OBS-Tests stehen noch aus.
+Install|Instalar|Installa|Installer|Installieren
+Uninstall|Desinstalar|Disinstalla|Désinstaller|Deinstallieren
+Close|Cerrar|Chiudi|Fermer|Schließen
+Installed. Open OBS and add VST 3 NEXUS as an audio filter.|Instalado. Abre OBS y añade el filtro VST 3 NEXUS a una fuente de audio.|Installato. Apri OBS e aggiungi VST 3 NEXUS come filtro audio.|Installé. Ouvrez OBS et ajoutez VST 3 NEXUS comme filtre audio.|Installiert. Öffne OBS und füge VST 3 NEXUS als Audiofilter hinzu.
+Uninstall OBS VST3 NEXUS from this folder?|¿Desinstalar OBS VST3 NEXUS de esta carpeta?|Disinstallare OBS VST3 NEXUS da questa cartella?|Désinstaller OBS VST3 NEXUS de ce dossier ?|OBS VST3 NEXUS aus diesem Ordner deinstallieren?
+Uninstalled. Unrelated files, settings and backups are preserved.|Desinstalado. Los archivos ajenos, ajustes y copias de seguridad se conservan.|Disinstallato. File estranei, impostazioni e backup sono conservati.|Désinstallé. Fichiers tiers, réglages et sauvegardes conservés.|Deinstalliert. Fremde Dateien, Einstellungen und Sicherungen bleiben erhalten.
+
+Install VST 3 NEXUS|Instalar VST 3 NEXUS|Installa VST 3 NEXUS|Installer VST 3 NEXUS|VST 3 NEXUS installieren
+Installation folder|Carpeta de instalación|Cartella di installazione|Dossier d’installation|Installationsordner
+Close OBS before installing or uninstalling.|Cierra OBS antes de instalar o desinstalar.|Chiudi OBS prima di installare o disinstallare.|Fermez OBS avant d’installer ou de désinstaller.|Schließe OBS vor der Installation oder Deinstallation.
+Scenes and profiles are preserved. Commercial effects are not included.|Se conservan tus escenas y perfiles. No incluye efectos comerciales.|Scene e profili vengono conservati. Effetti commerciali non inclusi.|Vos scènes et profils sont conservés. Effets commerciaux non inclus.|Szenen und Profile bleiben erhalten. Kommerzielle Effekte sind nicht enthalten.
+Destination path is too long. Choose a shorter folder.|La ruta de destino es demasiado larga. Elige una carpeta más corta.|Il percorso è troppo lungo. Scegli una cartella più corta.|Le chemin est trop long. Choisissez un dossier plus court.|Der Zielpfad ist zu lang. Wähle einen kürzeren Ordner.

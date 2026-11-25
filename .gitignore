@@ -1,0 +1,8 @@
+/build/
+/work/
+# Internal evidence and superseded packages: not public documentation.
+/docs/reports/
+/docs/legacy-rack/
+/docs/PHASE-*.md
+/dist/
+/installer/payload.zip

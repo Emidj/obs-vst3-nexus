@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "required_tests": [
+    "coherent_response_and_thd_references",
+    "dynamics_attack_release_references",
+    "measured_delay_and_aligned_bypass",
+    "parameter_ramp_block_invariance_and_retarget",
+    "zero_audio_heap_and_concurrent_parameter_stress",
+    "bypass_ramp_continuity",
+    "invalid_analysis_and_core_inputs"
+  ],
+  "limits": {
+    "response_max_error_db": {"min": 0, "max": 0.00001},
+    "thd_ratio_max_error": {"min": 0, "max": 0.000001},
+    "dynamics_max_error_seconds": {"min": 0, "max": 0.000022903},
+    "measured_latency_frames": {"min": 20, "max": 20},
+    "audio_heap_allocations": {"min": 0, "max": 0},
+    "audio_heap_deallocations": {"min": 0, "max": 0},
+    "stress_blocks": {"min": 100000, "max": 100000000},
+    "block_us_p50": {"min": 0},
+    "block_us_p95": {"min": 0},
+    "block_us_max": {"min": 0}
+  }
+}

@@ -1,0 +1,20 @@
+--- a/source/vst/hosting/module_win32.cpp
++++ b/source/vst/hosting/module_win32.cpp
+@@ -155,7 +155,7 @@
+ 	{
+ 		namespace StringConvert = Steinberg::Vst::StringConvert;
+ 
+-		filesystem::path p (inPath);
++		filesystem::path p (StringConvert::convert (inPath));
+ 
+ 		auto filename = p.filename ();
+ 		p /= "Contents";
+@@ -170,7 +170,7 @@
+ 			instance = loadAsPackage (inPath, errorDescription, architectureX64String);
+ #endif // SMTG_CPU_ARM_64EC
+ 		if (instance == nullptr)
+-			getLastError (p.string (), errorDescription);
++			getLastError (inPath, errorDescription);
+ 		return instance;
+ 	}
+ 

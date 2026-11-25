@@ -1,0 +1,42 @@
+{
+  "name": "iir1",
+  "version": "1.11.1",
+  "repository": "https://github.com/berndporr/iir1",
+  "commit": "164c12e7c7979dd016629adcfa188374caad3233",
+  "license": "MIT",
+  "selection": "Unmodified RBJ and Biquad source subset; custom parent CMake target",
+  "files": [
+    {
+      "sha256": "e35fccd19014525fcd0c557bfcf4a29979b3312ee3c4351c0e20d1e320d67ede",
+      "name": "iir/Biquad.cpp"
+    },
+    {
+      "sha256": "7c20b411362f24b584187e86fbc1ffb57f9cb574377ff11f1ec37b9cdccefd55",
+      "name": "iir/Biquad.h"
+    },
+    {
+      "sha256": "44ea4de02f279a8af4c6432232f31fd4c3a52063633b7fafe64d05d9f6e71f0c",
+      "name": "iir/Common.h"
+    },
+    {
+      "sha256": "c59d35836444fd3a14b852d14bb0de7cbd8a1f654e0e3686da0ddb416a885c30",
+      "name": "iir/MathSupplement.h"
+    },
+    {
+      "sha256": "94e1fab6e95c19b3998972bac01c3a884897aa085853144635de0cafaf1bf79a",
+      "name": "iir/RBJ.cpp"
+    },
+    {
+      "sha256": "83e85274c14bf292c1d020f47e27d02e514340ee87e83d03460b7d5b0002ea4a",
+      "name": "iir/RBJ.h"
+    },
+    {
+      "sha256": "90a41f2ed7f1a74171f935d26d484a7f3799aaf08b9b3cc0a5aaf4313d3a9fe9",
+      "name": "iir/State.h"
+    },
+    {
+      "sha256": "271d1ab55b6a66b36fe4af7b165393b5f9e8895f828350ca144d5c73c3930cb8",
+      "name": "iir/Types.h"
+    }
+  ]
+}

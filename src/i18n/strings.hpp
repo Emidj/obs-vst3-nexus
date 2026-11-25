@@ -1,0 +1,75 @@
+#pragma once
+#include <atomic>
+#include <cstring>
+namespace nexus::i18n {
+inline std::atomic<int> language{0};
+inline const char* codes[]{"en","es","it","fr","de"};
+inline void set_locale(const char* code){int chosen=0;if(code&&code[0]&&code[1])for(int i=0;i<5;++i)if(code[0]==codes[i][0]&&code[1]==codes[i][1])chosen=i;language.store(chosen,std::memory_order_relaxed);}
+inline const char* text(const char* key){
+static const char* rows[][5]={
+{u8"Bypass",u8"Omitir efecto",u8"Bypass",u8"Contourner",u8"Bypass"},
+{u8"Choose VST3 effect...",u8"Elegir efecto VST3...",u8"Scegli effetto VST3...",u8"Choisir un effet VST3...",u8"VST3-Effekt ausw\u00e4hlen..."},
+{u8"Choose VST3 effect",u8"Elegir efecto VST3",u8"Scegli effetto VST3",u8"Choisir un effet VST3",u8"VST3-Effekt ausw\u00e4hlen"},
+{u8"Open plugin interface",u8"Abrir interfaz del plugin",u8"Apri interfaccia del plugin",u8"Ouvrir l\u2019interface du plugin",u8"Plugin-Oberfl\u00e4che \u00f6ffnen"},
+{u8"Remove effect",u8"Quitar efecto",u8"Rimuovi effetto",u8"Retirer l\u2019effet",u8"Effekt entfernen"},
+{u8"No effect selected. Audio passes through.",u8"Ning\u00fan efecto seleccionado. El audio pasa sin procesar.",u8"Nessun effetto selezionato. L\u2019audio passa senza elaborazione.",u8"Aucun effet s\u00e9lectionn\u00e9. L\u2019audio passe sans traitement.",u8"Kein Effekt ausgew\u00e4hlt. Das Audio wird unver\u00e4ndert durchgeleitet."},
+{u8"One effect per filter. Add another OBS filter for another effect.",u8"Un efecto por filtro. A\u00f1ade otro filtro de OBS para otro efecto.",u8"Un effetto per filtro. Aggiungi un altro filtro OBS per un altro effetto.",u8"Un effet par filtre. Ajoutez un autre filtre OBS pour un autre effet.",u8"Ein Effekt pro Filter. F\u00fcge f\u00fcr einen weiteren Effekt einen weiteren OBS-Filter hinzu."},
+{u8"Effect unavailable",u8"Efecto no disponible",u8"Effetto non disponibile",u8"Effet indisponible",u8"Effekt nicht verf\u00fcgbar"},
+{u8"Loading effect...",u8"Cargando efecto...",u8"Caricamento effetto...",u8"Chargement de l\u2019effet...",u8"Effekt wird geladen..."},
+{u8"Wait for the current plugin operation to finish.",u8"Espera a que termine la operaci\u00f3n actual del plugin.",u8"Attendi il completamento dell\u2019operazione del plugin.",u8"Attendez la fin de l\u2019op\u00e9ration du plugin.",u8"Warte, bis der aktuelle Plugin-Vorgang abgeschlossen ist."},
+{u8"Source is no longer available.",u8"La fuente ya no est\u00e1 disponible.",u8"La sorgente non \u00e8 pi\u00f9 disponibile.",u8"La source n\u2019est plus disponible.",u8"Die Quelle ist nicht mehr verf\u00fcgbar."},
+{u8"Plugin interface is unavailable.",u8"La interfaz del plugin no est\u00e1 disponible.",u8"L\u2019interfaccia del plugin non \u00e8 disponibile.",u8"L\u2019interface du plugin est indisponible.",u8"Die Plugin-Oberfl\u00e4che ist nicht verf\u00fcgbar."},
+{u8"Plugin error. Technical details:",u8"Error del plugin. Detalles t\u00e9cnicos:",u8"Errore del plugin. Dettagli tecnici:",u8"Erreur du plugin. D\u00e9tails techniques :",u8"Plugin-Fehler. Technische Details:"},
+{u8"Add VST3 Effect",u8"A\u00f1adir efecto VST3",u8"Aggiungi effetto VST3",u8"Ajouter un effet VST3",u8"VST3-Effekt hinzuf\u00fcgen"},
+{u8"Select a 64-bit VST3 audio effect. Instruments are not supported.",u8"Selecciona un efecto de audio VST3 de 64 bits. No se admiten instrumentos.",u8"Seleziona un effetto audio VST3 a 64 bit. Gli strumenti non sono supportati.",u8"S\u00e9lectionnez un effet audio VST3 64 bits. Les instruments ne sont pas pris en charge.",u8"W\u00e4hle einen 64-Bit-VST3-Audioeffekt. Instrumente werden nicht unterst\u00fctzt."},
+{u8"Search effects",u8"Buscar efectos",u8"Cerca effetti",u8"Rechercher des effets",u8"Effekte suchen"},
+{u8"Optional VST3 folder",u8"Carpeta VST3 opcional",u8"Cartella VST3 facoltativa",u8"Dossier VST3 facultatif",u8"Optionaler VST3-Ordner"},
+{u8"Browse...",u8"Examinar...",u8"Sfoglia...",u8"Parcourir...",u8"Durchsuchen..."},
+{u8"VST3 effects folder",u8"Carpeta de efectos VST3",u8"Cartella degli effetti VST3",u8"Dossier des effets VST3",u8"Ordner f\u00fcr VST3-Effekte"},
+{u8"Choose a scan location.",u8"Elige una ubicaci\u00f3n para explorar.",u8"Scegli una posizione da analizzare.",u8"Choisissez un emplacement \u00e0 analyser.",u8"W\u00e4hle einen Speicherort zum Durchsuchen."},
+{u8"Scan installed",u8"Explorar instalados",u8"Analizza installati",u8"Analyser les effets install\u00e9s",u8"Installierte durchsuchen"},
+{u8"Scan folder",u8"Explorar carpeta",u8"Analizza cartella",u8"Analyser le dossier",u8"Ordner durchsuchen"},
+{u8"Retry scan",u8"Reintentar exploraci\u00f3n",u8"Riprova analisi",u8"Relancer l\u2019analyse",u8"Erneut durchsuchen"},
+{u8"Add",u8"A\u00f1adir",u8"Aggiungi",u8"Ajouter",u8"Hinzuf\u00fcgen"},
+{u8"Cancel",u8"Cancelar",u8"Annulla",u8"Annuler",u8"Abbrechen"},
+{u8"Choose a folder or use Scan installed.",u8"Elige una carpeta o pulsa Explorar instalados.",u8"Scegli una cartella o usa Analizza installati.",u8"Choisissez un dossier ou utilisez Analyser les effets install\u00e9s.",u8"W\u00e4hle einen Ordner oder nutze Installierte durchsuchen."},
+{u8"Stopping scan. Retry when it finishes.",u8"Deteniendo la exploraci\u00f3n. Reintenta cuando termine.",u8"Arresto dell\u2019analisi. Riprova al termine.",u8"Arr\u00eat de l\u2019analyse. R\u00e9essayez une fois termin\u00e9e.",u8"Suche wird angehalten. Versuche es danach erneut."},
+{u8"Other scans are finishing. Please retry.",u8"Otras exploraciones est\u00e1n terminando. Vuelve a intentarlo.",u8"Altre analisi stanno terminando. Riprova.",u8"D\u2019autres analyses se terminent. R\u00e9essayez.",u8"Andere Suchvorg\u00e4nge werden beendet. Versuche es erneut."},
+{u8"VST3 scan helper is missing.",u8"Falta el explorador auxiliar de VST3.",u8"Manca il programma di analisi VST3.",u8"Le programme d\u2019analyse VST3 est introuvable.",u8"Das VST3-Suchprogramm fehlt."},
+{u8"Finding VST3 effects...",u8"Buscando efectos VST3...",u8"Ricerca effetti VST3...",u8"Recherche des effets VST3...",u8"VST3-Effekte werden gesucht..."},
+{u8"Folder discovery limit reached.",u8"Se alcanz\u00f3 el l\u00edmite de carpetas.",u8"Raggiunto il limite delle cartelle.",u8"Limite de recherche des dossiers atteinte.",u8"Maximale Anzahl von Ordnern erreicht."},
+{u8"Effect list limit reached.",u8"Se alcanz\u00f3 el l\u00edmite de efectos.",u8"Raggiunto il limite degli effetti.",u8"Limite de la liste d\u2019effets atteinte.",u8"Maximale Anzahl von Effekten erreicht."},
+{u8"Scanning %1 / %2...",u8"Explorando %1 / %2...",u8"Analisi %1 / %2...",u8"Analyse %1 / %2...",u8"Suche %1 / %2..."},
+{u8"Found %1 effect candidates. Compatibility is checked when adding.",u8"Se encontraron %1 efectos candidatos. La compatibilidad se comprueba al a\u00f1adirlos.",u8"Trovati %1 effetti candidati. La compatibilit\u00e0 viene verificata all\u2019aggiunta.",u8"%1 effets candidats trouv\u00e9s. La compatibilit\u00e9 est v\u00e9rifi\u00e9e lors de l\u2019ajout.",u8"%1 m\u00f6gliche Effekte gefunden. Die Kompatibilit\u00e4t wird beim Hinzuf\u00fcgen gepr\u00fcft."},
+{u8"Scan cancelled. ",u8"Exploraci\u00f3n cancelada. ",u8"Analisi annullata. ",u8"Analyse annul\u00e9e. ",u8"Suche abgebrochen. "},
+{u8"%1 scan issue(s).",u8"%1 incidencias de exploraci\u00f3n.",u8"%1 problemi di analisi.",u8"%1 probl\u00e8me(s) d\u2019analyse.",u8"%1 Suchproblem(e)."},
+{u8"Invalid path in package.",u8"Ruta no v\u00e1lida en el paquete.",u8"Percorso non valido nel pacchetto.",u8"Chemin invalide dans le paquet.",u8"Ung\u00fcltiger Pfad im Paket."},
+{u8"Incomplete package.",u8"Paquete incompleto.",u8"Pacchetto incompleto.",u8"Paquet incomplet.",u8"Unvollst\u00e4ndiges Paket."},
+{u8"Close OBS before continuing.",u8"Cierra OBS antes de continuar.",u8"Chiudi OBS prima di continuare.",u8"Fermez OBS avant de continuer.",u8"Schlie\u00dfe OBS, bevor du fortf\u00e4hrst."},
+{u8"Invalid installation record.",u8"Registro de instalaci\u00f3n no v\u00e1lido.",u8"Registro di installazione non valido.",u8"Registre d\u2019installation invalide.",u8"Ung\u00fcltige Installationsaufzeichnung."},
+{u8"Record contains unknown files.",u8"Registro con archivos desconocidos.",u8"Il registro contiene file sconosciuti.",u8"Le registre contient des fichiers inconnus.",u8"Die Aufzeichnung enth\u00e4lt unbekannte Dateien."},
+{u8"The destination folder must be named obs-vst3-nexus.",u8"La carpeta de destino debe llamarse obs-vst3-nexus.",u8"La cartella di destinazione deve chiamarsi obs-vst3-nexus.",u8"Le dossier de destination doit s\u2019appeler obs-vst3-nexus.",u8"Der Zielordner muss obs-vst3-nexus hei\u00dfen."},
+{u8"An unowned or modified file was preserved: ",u8"Se conserva un archivo ajeno o modificado: ",u8"File estraneo o modificato conservato: ",u8"Un fichier tiers ou modifi\u00e9 a \u00e9t\u00e9 conserv\u00e9 : ",u8"Eine fremde oder ge\u00e4nderte Datei wurde beibehalten: "},
+{u8"The operation did not complete. Check the administrator window.",u8"No se complet\u00f3 la operaci\u00f3n. Revisa el mensaje de la ventana de administrador.",u8"Operazione non completata. Controlla la finestra amministratore.",u8"L\u2019op\u00e9ration n\u2019a pas abouti. Consultez la fen\u00eatre administrateur.",u8"Der Vorgang wurde nicht abgeschlossen. Pr\u00fcfe das Administratorfenster."},
+{u8"Test installer 0.1.0 \u00b7 revision 10",u8"Instalador de prueba 0.1.0 \u00b7 revisi\u00f3n 10",u8"Installer di prova 0.1.0 \u00b7 revisione 10",u8"Installateur de test 0.1.0 \u00b7 r\u00e9vision 10",u8"Testinstallation 0.1.0 \u00b7 Revision 10"},
+{u8"One VST3 effect per filter \u00b7 Windows x64 \u00b7 OBS 31 / 32 / 33",u8"Un efecto VST3 por filtro \u00b7 Windows x64 \u00b7 OBS 31 / 32 / 33",u8"Un effetto VST3 per filtro \u00b7 Windows x64 \u00b7 OBS 31 / 32 / 33",u8"Un effet VST3 par filtre \u00b7 Windows x64 \u00b7 OBS 31 / 32 / 33",u8"Ein VST3-Effekt pro Filter \u00b7 Windows x64 \u00b7 OBS 31 / 32 / 33"},
+{u8"Test version. Close OBS before installing or uninstalling.",u8"Versi\u00f3n de prueba. Cierra OBS antes de instalar o desinstalar.",u8"Versione di prova. Chiudi OBS prima di installare o disinstallare.",u8"Version de test. Fermez OBS avant d\u2019installer ou de d\u00e9sinstaller.",u8"Testversion. Schlie\u00dfe OBS vor der Installation oder Deinstallation."},
+{u8"Folder\u2026",u8"Carpeta\u2026",u8"Cartella\u2026",u8"Dossier\u2026",u8"Ordner\u2026"},
+{u8"Select the parent folder for obs-vst3-nexus",u8"Selecciona la carpeta padre para instalar obs-vst3-nexus",u8"Seleziona la cartella principale per obs-vst3-nexus",u8"S\u00e9lectionnez le dossier parent pour obs-vst3-nexus",u8"W\u00e4hle den \u00fcbergeordneten Ordner f\u00fcr obs-vst3-nexus"},
+{u8"Scenes and profiles are preserved. Keep this installer to uninstall.",u8"No modifica escenas ni perfiles. Conserva el instalador para desinstalar.",u8"Scene e profili vengono conservati. Tieni l\u2019installer per disinstallare.",u8"Sc\u00e8nes et profils conserv\u00e9s. Gardez cet installateur pour d\u00e9sinstaller.",u8"Szenen und Profile bleiben erhalten. Bewahre das Installationsprogramm auf."},
+{u8"Commercial effects are not included. Extended OBS testing remains pending.",u8"No incluye efectos comerciales. Quedan pendientes pruebas ampliadas en OBS.",u8"Effetti commerciali non inclusi. Restano da svolgere test estesi in OBS.",u8"Effets commerciaux non inclus. Des tests OBS approfondis restent n\u00e9cessaires.",u8"Kommerzielle Effekte sind nicht enthalten. Erweiterte OBS-Tests stehen noch aus."},
+{u8"Install",u8"Instalar",u8"Installa",u8"Installer",u8"Installieren"},
+{u8"Uninstall",u8"Desinstalar",u8"Disinstalla",u8"D\u00e9sinstaller",u8"Deinstallieren"},
+{u8"Close",u8"Cerrar",u8"Chiudi",u8"Fermer",u8"Schlie\u00dfen"},
+{u8"Installed. Open OBS and add VST 3 NEXUS as an audio filter.",u8"Instalado. Abre OBS y a\u00f1ade el filtro VST 3 NEXUS a una fuente de audio.",u8"Installato. Apri OBS e aggiungi VST 3 NEXUS come filtro audio.",u8"Install\u00e9. Ouvrez OBS et ajoutez VST 3 NEXUS comme filtre audio.",u8"Installiert. \u00d6ffne OBS und f\u00fcge VST 3 NEXUS als Audiofilter hinzu."},
+{u8"Uninstall OBS VST3 NEXUS from this folder?",u8"\u00bfDesinstalar OBS VST3 NEXUS de esta carpeta?",u8"Disinstallare OBS VST3 NEXUS da questa cartella?",u8"D\u00e9sinstaller OBS VST3 NEXUS de ce dossier ?",u8"OBS VST3 NEXUS aus diesem Ordner deinstallieren?"},
+{u8"Uninstalled. Unrelated files, settings and backups are preserved.",u8"Desinstalado. Los archivos ajenos, ajustes y copias de seguridad se conservan.",u8"Disinstallato. File estranei, impostazioni e backup sono conservati.",u8"D\u00e9sinstall\u00e9. Fichiers tiers, r\u00e9glages et sauvegardes conserv\u00e9s.",u8"Deinstalliert. Fremde Dateien, Einstellungen und Sicherungen bleiben erhalten."},
+{u8"Install VST 3 NEXUS",u8"Instalar VST 3 NEXUS",u8"Installa VST 3 NEXUS",u8"Installer VST 3 NEXUS",u8"VST 3 NEXUS installieren"},
+{u8"Installation folder",u8"Carpeta de instalaci\u00f3n",u8"Cartella di installazione",u8"Dossier d\u2019installation",u8"Installationsordner"},
+{u8"Close OBS before installing or uninstalling.",u8"Cierra OBS antes de instalar o desinstalar.",u8"Chiudi OBS prima di installare o disinstallare.",u8"Fermez OBS avant d\u2019installer ou de d\u00e9sinstaller.",u8"Schlie\u00dfe OBS vor der Installation oder Deinstallation."},
+{u8"Scenes and profiles are preserved. Commercial effects are not included.",u8"Se conservan tus escenas y perfiles. No incluye efectos comerciales.",u8"Scene e profili vengono conservati. Effetti commerciali non inclusi.",u8"Vos sc\u00e8nes et profils sont conserv\u00e9s. Effets commerciaux non inclus.",u8"Szenen und Profile bleiben erhalten. Kommerzielle Effekte sind nicht enthalten."},
+{u8"Destination path is too long. Choose a shorter folder.",u8"La ruta de destino es demasiado larga. Elige una carpeta m\u00e1s corta.",u8"Il percorso \u00e8 troppo lungo. Scegli una cartella pi\u00f9 corta.",u8"Le chemin est trop long. Choisissez un dossier plus court.",u8"Der Zielpfad ist zu lang. W\u00e4hle einen k\u00fcrzeren Ordner."}
+};
+for(const auto& row:rows)if(std::strcmp(key,row[0])==0)return row[language.load(std::memory_order_relaxed)];return key;
+}
+}
